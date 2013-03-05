@@ -1,1 +1,1 @@
-web: gunicorn meetmanage.wsgi
+web: gunicorn wavrincom.wsgi
