@@ -1,11 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
 {% if latest_post_list %}
     <ul>
     {% for post in latest_post_list %}
-		<li><a href="{% url 'post:detail' post.id %}">{{ post.title }}</a><br>
-			<p>{{ post.text|truncatewords:44 }} <a href="{% url 'post:detail' post.id %}">more</a> </p>
-		</li>
+		<h3><a href="{% url 'post:detail' post.id %}">{{ post.title }}</a></h3>
+			<p>{{ post.text|truncatewords:100 }} <a href="{% url 'post:detail' post.id %}">more</a> </p>
+		
     {% endfor %}
     </ul>
 {% else %}
     <p>No posts are available.</p>
 {% endif %}
+{% endblock %}

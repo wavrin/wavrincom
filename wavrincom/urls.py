@@ -3,6 +3,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^blog/', include('blog.urls', namespace="post")),
+	url(r'^', include('blog.urls', namespace="post")),
     url(r'^admin/', include(admin.site.urls)),
 )
