@@ -1,4 +1,5 @@
 # Django settings for wavrincom project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -60,18 +61,22 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(DIRNAME, 'static')
+
+AWS_STORAGE_BUCKET_NAME = os.environ['herokuwavcom']
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = S3_URL
+
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    "static",
-)
+PROJECT_DIR = os.path.dirname(__file__)
+
+STATICFILES_DIRS = (os.path.join(PROJECT_DIR, 'static'),)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -121,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'blog',
+    'storages',
 )
 
 # A sample logging configuration. The only tangible logging
