@@ -1,1 +1,1 @@
-web: gunicorn wavrincom.wsgi
+web: gunicorn run-progam wavrincom.wsgi
