@@ -1,1 +1,1 @@
-web: newrelic-admin run-program gunicorn wavrincom.wsgi
+web: gunicorn wavrincom.wsgi

@@ -2,6 +2,5 @@ venv
 build
 static
 *.pyc
-newrelic.ini
 .DS_Store
 .db.db
