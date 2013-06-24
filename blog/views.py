@@ -7,6 +7,6 @@ def index(request):
 	context = {'latest_post_list': latest_post_list}
 	return render(request, 'blog/index.html', context)
 
-def detail(request, post_id):
-	post = get_object_or_404(Post, pk=post_id)
+def detail(request, slug):
+	post = get_object_or_404(Post, slug=slug)
 	return render(request, 'blog/detail.html', {'post': post})

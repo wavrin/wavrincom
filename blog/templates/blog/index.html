@@ -3,8 +3,8 @@
 {% if latest_post_list %}
     <ul>
     {% for post in latest_post_list %}
-		<h3><a href="{% url 'post:detail' post.id %}">{{ post.title }}</a></h3>
-			<p>{{ post.text|truncatewords:100 }} <a href="{% url 'post:detail' post.id %}">more</a> </p>
+		<h3><a href="{% url 'post:detail' post.slug %}">{{ post.title }}</a></h3>
+			<p>{{ post.text|truncatewords:100 }} <a href="{% url 'post:detail' post.slug %}">more</a> </p>
 		
     {% endfor %}
     </ul>
