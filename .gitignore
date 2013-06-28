@@ -4,3 +4,4 @@ static
 *.pyc
 .DS_Store
 .db.db
+local_settings.py
