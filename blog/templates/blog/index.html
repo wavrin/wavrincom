@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load markup %}
 {% block content %}
 {% if latest_post_list %}
     
     {% for post in latest_post_list %}
 		<h3><a href="{% url 'post:detail' post.slug %}">{{ post.title }}</a></h3>
-			<p>{{ post.text|truncatewords:100 }} <a href="{% url 'post:detail' post.slug %}">more</a> </p>
+			<p>{{ post.text|markdown:"codehilite"|truncatewords:400 }} <a href="{% url 'post:detail' post.slug %}">more</a> </p>
 		
     {% endfor %}
     
