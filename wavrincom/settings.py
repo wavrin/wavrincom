@@ -143,6 +143,9 @@ INSTALLED_APPS = (
     'disqus',
 )
 
+DISQUS_API_KEY = '3SEISxDVpthkkvZJxNzpBBEnwtEbUYaDGumwCNLV2rCyRYTZqTFcsckCBaxPg7sC'
+DISQUS_WEBSITE_SHORTNAME = 'wavrin'
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
