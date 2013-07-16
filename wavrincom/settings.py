@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'storages',
     'blog',
+    'disqus',
 )
 
 # A sample logging configuration. The only tangible logging
