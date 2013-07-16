@@ -4,6 +4,7 @@ Pygments==1.6
 South==0.8.1
 boto==2.9.5
 dj-database-url==0.2.1
+django-disqus==0.4.1
 django-markdown==0.2.1
 django-storages==1.1.8
 gunicorn==0.17.4
