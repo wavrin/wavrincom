@@ -6,6 +6,8 @@
 
 <h1>{{ post.title }}</h1>
 
+<small>{{ post.pub_date|date:"M d Y" }}</small>
+
 <p>{{ post.text|markdown:"codehilite" }}</p>
 {% disqus_show_comments %}
 
