@@ -141,10 +141,13 @@ INSTALLED_APPS = (
     'storages',
     'blog',
     'disqus',
+    'ganalytics',
 )
 
 DISQUS_API_KEY = '3SEISxDVpthkkvZJxNzpBBEnwtEbUYaDGumwCNLV2rCyRYTZqTFcsckCBaxPg7sC'
 DISQUS_WEBSITE_SHORTNAME = 'wavrin'
+
+GANALYTICS_TRACKING_CODE = 'UA-42536217-1'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

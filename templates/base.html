@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load ganalytics %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,6 +9,7 @@
     <link href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <style>.content {padding-top: 80px;}</style>
+    {% ganalytics %}
   </head>
 
   <body>
